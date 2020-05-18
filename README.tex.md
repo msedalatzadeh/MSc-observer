@@ -2,9 +2,8 @@
 
 Based on the strain gradient elasticity theory by Lam et al., a new flexible micro beam model can be derived by making Euler-Bernoulli beam assumptions and by using Hamilton principle. Accordingly, the governing PDE of motion and corresponding boundary conditions (BSc) for a micro cantilever beam with uniform cross section $A$ and length $L$ become
 
-<p align="center">
-<img src="equations/Eqn1.gif" width="300" />
-</p>
+$${K_1}\frac{{{\partial ^4}w}}{{\partial {x^4}}} - {K_2}\frac{{{\partial ^6}w}}{{\partial {x^6}}} + \rho A\frac{{{\partial ^2}w}}{{\partial {t^2}}} = f(x,t),$$
+
 <p align="center">
 <img src="equations/Eqn2.gif" width="300" />
 </p>
@@ -150,7 +149,7 @@ The same procedure is followed for the nonlinear force coefficients $\mi$ and  $
 
 
 <p align="center">
-<img src="figs/fig14.jpg" width="600" /> (b)
+<img src="figs/fig14.jpg" width="600" /> (a)
 </p>
 
 #### Fig. 9(a). Mean distance $Z_m$ between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients $\beta$ and $\gamma$.
@@ -167,14 +166,14 @@ In all of the simulations, Casimir and van der Waals forces have adverse effect 
 The effect of the new material length scales is also studied in Fig. 10(a) and Fig. 10(b). In these figures, the coefficient of the non-classical terms in the governing equation (i.e. the coefficient $\zeta$) is changed from $10^{-5}$ to $10^{-2}$. Simulations show that the more beam model deviates from the classical model the more pull-in threshold is raised. Moreover, similar to previous simulations, in the presence of controller, the travel range is wider and the pull-in voltage is higher.
 
 <p align="center">
-<img src="figs/fig16.jpg" width="600" /> (b)
+<img src="figs/fig16.jpg" width="600" /> (a)
 </p>
 
-Fig. 10(a). Mean distance  $Z_m$ between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients $\beta$ and $\zeta$.
+#### Fig. 10(a). Mean distance  $Z_m$ between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients $\beta$ and $\zeta$.
 
 <p align="center">
 <img src="figs/fig17.jpg" width="600" /> (b)
 </p>
 
-Fig. 10(b). Steady state distance $Z_\infty$ between the free end of the beam and the ground in closed-loop system vs. nonlinear force coefficients $\beta$ and $\zeta$.
+#### Fig. 10(b). Steady state distance $Z_\infty$ between the free end of the beam and the ground in closed-loop system vs. nonlinear force coefficients $\beta$ and $\zeta$.
 
