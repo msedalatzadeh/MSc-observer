@@ -47,7 +47,7 @@ the PDE and corresponding BCs governing the micro- or nano- cantilever beam used
 ## Programming
 Programmings are carried out in MATLAB. The main code is `sg.m` that computes the dynamic deflection of the beam using finite-element method.
 
-```mathlab
+```matlab
 %% sg.m
 clear all
 clc
