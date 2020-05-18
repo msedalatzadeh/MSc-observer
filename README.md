@@ -3,10 +3,10 @@
 Based on the strain gradient elasticity theory by Lam et al., a new flexible micro beam model can be derived by making Euler-Bernoulli beam assumptions and by using Hamilton principle. Accordingly, the governing PDE of motion and corresponding boundary conditions (BSc) for a micro cantilever beam with uniform cross section <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> and length <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> become
 
 <p align="center">
-<img src="equations/Eqn1.gif" width="200" />
+<img src="equations/Eqn1.gif" width="300" />
 </p>
 <p align="center">
-<img src="equations/Eqn2.gif" width="200" />
+<img src="equations/Eqn2.gif" width="300" />
 </p>
 
 
@@ -22,7 +22,7 @@ where <img src="/tex/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode&san
 A schematic of the cantilever beam used in M/NEMS devices is shown in the Fig. 1. The cantilever has length <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/>, uniform cross section <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/>, and width <img src="/tex/4bdc8d9bcfb35e1c9bfb51fc69687dfc.svg?invert_in_darkmode&sanitize=true" align=middle width=7.054796099999991pt height=22.831056599999986pt/>; it is separated by a gap with length <img src="/tex/3cf4fbd05970446973fc3d9fa3fe3c41.svg?invert_in_darkmode&sanitize=true" align=middle width=8.430376349999989pt height=14.15524440000002pt/> from the underneath substrate. The substrate exposes the beam to nonlinear distributed forces arising from electrical potential difference and intermolecular interactions between the beam and the underneath substrate.
  
 <p align="center">
-<img src="figs/beam.jpg" width="600" />
+<img src="figs/beam.jpg" width="400" />
 </p>
 
 #### Fig. 1. Schematic of a cantilever beam based M/NEMS device: (a) Cantilever beam, (b) Dielectric spacer, and (c) Substrate.
@@ -30,19 +30,19 @@ A schematic of the cantilever beam used in M/NEMS devices is shown in the Fig. 1
 The intermolecular forces that play a crucial role in micron and submicron scale are the van der Waals and the Casimir force, which have different range of application. The Casimir force is effective in the micro-scale ranges whereas the van der Waals force is effective in nano-scale ranges. To investigate a general case, we omit consideration of the transition regime and formulate the distributed external transverse forces more generally as follows:
   
 <p align="center">
-<img src="equations/Eqn4.gif" width="300" />
+<img src="equations/Eqn4.gif" width="500" />
 </p>
 
 in which the first right-hand side term gives the value of the electrostatic force with first order fringing field correction; the next one gives the value of the Casimir force; the last one is the usual expression for the van der Waals force. Furthermore, <img src="/tex/0327922857a3c80945224eeda3da15df.svg?invert_in_darkmode&sanitize=true" align=middle width=147.3744525pt height=26.76175259999998pt/> is Plank constant divided by <img src="/tex/5a7b63fcb316fdefe42e319d18ab939a.svg?invert_in_darkmode&sanitize=true" align=middle width=18.179315549999988pt height=21.18721440000001pt/>; <img src="/tex/7fb5615db5df7077d50164f2324feb86.svg?invert_in_darkmode&sanitize=true" align=middle width=148.95556499999998pt height=26.76175259999998pt/> is speed of light; <img src="/tex/732c7964ffecaa48684a1e457b308a5e.svg?invert_in_darkmode&sanitize=true" align=middle width=197.72883074999996pt height=26.76175259999998pt/> is the permittivity of vacuum;  <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> is the Hamaker constant with values in the range of <img src="/tex/5220c564d7790bf64afba19b17a21c46.svg?invert_in_darkmode&sanitize=true" align=middle width=117.08914634999998pt height=26.76175259999998pt/> and <img src="/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/> denotes the electrical potential difference between the beam and the underneath plate. Utilizing the strain gradient Euler-Bernoulli beam model and defining the following dimensionless variables:
 
 <p align="center">
-<img src="equations/Eqn5.gif" width="200" />
+<img src="equations/Eqn5.gif" width="400" />
 </p>
 
 the PDE and corresponding BCs governing the micro- or nano- cantilever beam used in M/NEMS devices are
  
 <p align="center">
-<img src="equations/Eqn6.gif" width="200" />
+<img src="equations/Eqn6.gif" width="300" />
 </p>
 
 
@@ -70,4 +70,27 @@ According to Table 1, the coefficients corresponding to the sixth order derivati
 <p align="center">
 <img src="figs/fig2.jpg" width="600" /> 
 </p>
-#### Fig. 2. Equilibrium distance between the free end of the beam and the ground   vs. various coefficients of the nonlinear forces.
+
+#### Fig. 2. Equilibrium distance between the free end of the beam and the ground <img src="/tex/f3a3bfc1331844776f84cf2725724b0a.svg?invert_in_darkmode&sanitize=true" align=middle width=77.05065554999999pt height=24.65753399999998pt/> vs. various coefficients of the nonlinear forces.
+
+Next, the effect of the proposed controller is studied on the dynamic pull-in threshold of the nonlinear system. In order to simulate the dynamic pull-in instability, the beam is considered to be at rest and an electric potential difference is suddenly applied to the device. The open-loop and closed-loop system response are then simulated for various values of electrostatic force coefficient <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> while the other force coefficients are assumed constant.
+
+As a case in point, considering the practical values for <img src="/tex/e5c0c55191274dbb2a4499ab5c5b8175.svg?invert_in_darkmode&sanitize=true" align=middle width=8.40469739999999pt height=22.831056599999986pt/>, <img src="/tex/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width=9.423880949999988pt height=14.15524440000002pt/>, <img src="/tex/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width=10.57650494999999pt height=14.15524440000002pt/>, and <img src="/tex/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width=9.90492359999999pt height=14.15524440000002pt/> based on Table 1, the static solution <img src="/tex/320b3450fd8b780975b68c70115439b3.svg?invert_in_darkmode&sanitize=true" align=middle width=31.590693749999986pt height=24.65753399999998pt/> is found for various coefficient <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/>. The results are shown in the Fig. 3 in which the maximum value for electrostatic force coefficient is at <img src="/tex/b7a636ed3f8a01f5697975ad6a73ba8a.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/>. In the dynamic system simulations, we should not cross this threshold.
+
+
+<p align="center">
+<img src="figs/fig3.jpg" width="600" /> 
+</p>
+
+#### Fig. 3. Equilibrium distance between the free end of the beam and the ground <img src="/tex/f3a3bfc1331844776f84cf2725724b0a.svg?invert_in_darkmode&sanitize=true" align=middle width=77.05065554999999pt height=24.65753399999998pt/> vs. <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/>.
+
+Running the dynamic simulations, Fig. 4(a) and 4(b) indicate dimensionless dynamic distance <img src="/tex/54d7657e71ba76441476037b8f6b67c5.svg?invert_in_darkmode&sanitize=true" align=middle width=46.643873099999986pt height=28.023570300000017pt/> for <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/8897c89dd043239cf31cea9a80e3ea90.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/> in the simulation of open-loop system, respectively.
+
+<p align="center">
+<img src="figs/fig4.jpg" width="600" /> 
+</p>
+<p align="center">
+<img src="figs/fig5.jpg" width="600" /> 
+</p>
+
+Fig. 4. Dimensionless dynamic distance   vs. time plotted for open-loop system: a)   and b)  .
