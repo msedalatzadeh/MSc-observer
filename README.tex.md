@@ -61,7 +61,7 @@ g\frac{{{\partial ^3}Z}}{{\partial {{\tilde x}^3}}}\left( {1,\tilde t} \right) -
 ## Programming
 Programmings are carried out in MATLAB. The main code is `sg.m` that computes the dynamic deflection of the beam using finite-element method.
 
-```mathlab
+```matlab
 %% sg.m
 clear all
 clc
