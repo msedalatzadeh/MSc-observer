@@ -45,12 +45,157 @@ the PDE and corresponding BCs governing the micro- or nano- cantilever beam used
  
 
 
+## Programming
+Programmings are carried out in MATLAB. The main code is `sg.m` that computes the dynamic deflection of the beam using finite-element method.
+
+```mathlab
+%% sg.m
+clear all
+clc
+fig=1
+hp=1.055*10^-34;
+c=2.2998*10^8;
+e0=8.854*10^-12;
+l = 17.6e-6;
+h = 5*l;
+w=10*l;
+L=50*h
+g=w;
+V=2;
+E = 1.44e9;
+nu=0.38;
+mu=E/(2*(1+nu));
+rho = 1000;
+A = w*h;
+II = 1/12*w*h^3;
+l0=l;
+l1=l;
+l2=l;
+D1=E*II+mu*A*(2*l0^2+(8/15)*l1^2+l2^2);
+D2=mu*II*(2*l0^2+(4/5)*l1^2);
+%% %%%%%%% parameter %%%%%%%%%
+% alpha=pi^2*hp*c*w*L^4/(240*g^5*D1)
+% beta=e0*w*V^2*L^4/(2*g^3*D1)*10^5
+% gama=0.65*g/w
+% zeta=D2/D1/L^2
+alpha=0.1
+beta=0
+gama=0
+mu=0
+zeta=0
+kf=-1
+km=0
+nr=10
+smax=100
+dt=10^-4
+n=3
+Le = 1/n;
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+K1=(1/Le^3)*[120/7 60*Le/7 (3*Le^2)/7 -120/7 60*Le/7 -3*Le^2/7
+    60*Le/7 192*Le^2/35 11*Le^3/35 -60*Le/7 108*Le^2/35 -4*Le^3/35
+    (3*Le^2)/7 11*Le^3/35 (3*Le^4)/35 -(3*Le^2)/7 (4*Le^3)/35 Le^4/70
+    -120/7 -60*Le/7 -(3*Le^2)/7 120/7 -60*Le/7 (3*Le^2)/7
+    60*Le/7 108*Le^2/35 (4*Le^3)/35 -60*Le/7 (192*Le^2)/35 (-11*Le^3)/35
+    -3*Le^2/7 -4*Le^3/35 Le^4/70 (3*Le^2)/7 (-11*Le^3)/35 (3*Le^4)/35];
+
+K2=(zeta/(Le^5))*[720, 360*Le, 60*Le^2, -720, 360*Le, -60*Le^2
+    360*Le, 192*Le^2, 36*Le^3, -360*Le, 168*Le^2, -24*Le^3
+    60*Le^2, 36*Le^3, 9*Le^4, -60*Le^2, 24*Le^3, -3*Le^4
+    -720, -360*Le, -60*Le^2, 720, -360*Le, 60*Le^2
+    360*Le, 168*Le^2, 24*Le^3, -360*Le, 192*Le^2, -36*Le^3
+    -60*Le^2, -24*Le^3, -3*Le^4,  60*Le^2, -36*Le^3, 9*Le^4];
+
+
+K=K1+K2;
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+M = Le/55440*[21720 3732*Le 281*Le^2 6000 -1812*Le 181*Le^2
+    3732*Le 832*Le^2 69*Le^3 1812*Le -532*Le^2 52*Le^3
+    281*Le^2 69*Le^3 6*Le^4 181*Le^2 -52*Le^3 5*Le^4
+    6000 1812*Le 181*Le^2 21720 -3732*Le 281*Le^2
+    -1812*Le -532*Le^2 -52*Le^3 -3732*Le 832*Le^2 -69*Le^3
+    181*Le^2 52*Le^3 5*Le^4 281*Le^2 -69*Le^3 6*Le^4];
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+q1=.5*dt;
+q2=(1-.5)*dt;
+q3=1/(4/5)/dt^2;
+q4=q3*dt;
+q5=1/(8/5)-1;
+q6=.5/(4/5*dt);
+q7=.5/(4/5);
+q8=dt*(.5/(8/5)-1);
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+H{1}=[-6 15 -10 0 0 1];
+H{2}=Le*[-3 8 -6 0 1 0];
+H{3}=0.5*Le^2*[-1 3 -3 1 0 0];
+H{4}=[6 -15 10 0 0 0];
+H{5}=Le*[-3 7 -4 0 0 0];
+H{6}=0.5*Le^2*[1 -2 1 0 0 0];
+%% %%%%%%%%%%%%%  initial cond.   %%%%%%%%%%%%%%%%%%%%%%%%
+a{1,nr}=[];
+ic=[1 0 0]';
+for ff=1:n+1
+    a{1,nr}=[ic;a{1,nr}];
+end
+%%% means that :   a{1,nr}=[1,0,0,1,0,0,.....]';
+at{1}=zeros(3*(n+1),1);
+%% %%%%%%%%%%%%%%%%%%  assembly  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+KG=0;
+MG=0;
+for qq=1:n
+    KK(:,:,qq)=zeros((n+1)*3);
+    MM(:,:,qq)=zeros((n+1)*3);
+ 
+ for i=1:6
+     for j=1:6
+         KK(i+(qq-1)*3,j+(qq-1)*3,qq)=K(i,j);
+         MM(i+(qq-1)*3,j+(qq-1)*3,qq)=M(i,j);
+              
+     end
+ end
+
+ KG=KG+KK(:,:,qq);
+ MG=MG+MM(:,:,qq);
+ 
+end
+F1=-KG(:,1);
+%% %%%%%%%%%%%%%%%%%%%%% initial force & acceleration  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+F0=zeros((n+1)*3,1);
+for qq=1:n
+  F0(1+(qq-1)*3:6+(qq-1)*3,1)=F0(1+(qq-1)*3:6+(qq-1)*3,1)+integralhandle(a{1,nr}(1+(qq-1)*3:6+(qq-1)*3)',alpha,mu,beta,gama,Le,1000);
+end
+att{1}=[0;0;0;MG(4:3*(n+1),4:3*(n+1))\(-F0(4:3*(n+1)))];
+.
+.
+.
+.  Please see the original code for the rest
+.
+.
+.
+```
+
+This script uses two functions `force.m` and `tanforce.m`. These functions respectively calculate the non-linearity and the gradient of the non-linearity, respectively. Also, these function are generated using **MATLAB Symbolic ToolBox** and use of `MatlabFunction()` found in `force_generator.m` and `tanforce_generator.m`.
+
+```matlab
+%% force_generator.m
+clear all
+clc
+syms s a1 a2 a3 a4 a5 a6 alpha beta gama mu Le
+
+H(1,1) = 1-10*s^3+15*s^4-6*s^5;
+H(2,1) = Le*(s-6*s^3+8*s^4-3*s^5);
+H(3,1) = Le^2/2*(s^2-3*s^3+3*s^4-s^5);
+H(4,1) = 10*s^3-15*s^4+6*s^5;
+H(5,1) = Le*(-4*s^3+7*s^4-3*s^5);
+H(6,1) = Le^2/2*(s^3-2*s^4+s^5);
+
+a=[a1 a2 a3 a4 a5 a6];
+
+Fsym=(alpha/(a*H)^4+mu/(a*H)^3+beta/(a*H)^2+beta*gama/(a*H))*H;
+F=matlabFunction(Fsym,'file','force','vars',{a,s,alpha,mu,beta,gama,Le}); 
+```
 
 ##	Simulation Results
 In this section, the effectiveness of the proposed controller in suppressing the nonlinear forced vibrations and dynamic pull-in instability of the system is demonstrated. In this regard, the nonlinear dimensionless PDE and corresponding BCs. in (2.9) under the boundary feedback control law (3.9) are numerically solved using Kantorovich method and iterative Newton-Raphson algorithm. Nonlinear terms in the governing PDE arise from external distributed forces, namely Casimir, van der Waals forces, and electrostatic force with first order fringing field correction; coefficients <img src="/tex/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width=10.57650494999999pt height=14.15524440000002pt/>, <img src="/tex/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width=9.90492359999999pt height=14.15524440000002pt/>, <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width=9.423880949999988pt height=14.15524440000002pt/> are associated with these forces, respectively.
-
-### Programming
-Programmings are carried out in MATLAB.
 
 The geometrical and mechanical properties of the strain gradient micro-beam considered for computer simulations are specified in Table 1. The micro-beam is considered to be made of epoxy; the mechanical properties of the epoxy micro-beams are measured by Lam et al.
 
@@ -185,11 +330,18 @@ The effect of the new material length scales is also studied in Fig. 10(a) and F
 
 ## References
 [1] **M. S. Edalatzadeh** and A. Alasty, “Boundary Exponential Stabilization of Non-classical Micro/Nano Beams Subjected to Nonlinear Distributed Forces,” Applied Mathematical Modelling, vol. 40, no. 3, pp. 2223–2241, 2016.
+
 [2] **M. S. Edalatzadeh**, A. Alasty, and R. Vatankhah, “Admissibility and Exact Observability of Observation Operators for Micro-Beam Model: Time and Frequency Domain Approaches,” IEEE Transaction on Automatic Control, vol. 62, no. 12, pp. 6438–6444, 2017.
+
 [3] **M. S. Edalatzadeh**, R. Vatankhah, and A. Alasty, “Suppression of Dynamic Pull-in Instability in Electrostatically Actuated Strain Gradient Beams,” in Second RSI/ISM International Conference on Robotics and Mechatronics (ICRoM), 2014, pp. 155–160.
+
 [4] D. Lam, F. Yang, A. Chong, J. Wang, P. Tong, Experiments and theory in strain gradient elasticity, Journal of the Mechanics and Physics of Solids, 51 (2003) 1477-1508.
+
 [5] R.F. Curtain, H. Zwart, An Introduction to Infinite-Dimensional Linear Systems Theory, Springer, 1995.
+
 [6] I.M. Gelfand, I.M. Gelfand, S.V. Fomin, R.A. Silverman, Calculus of Variations, Dover Publications, 2000.
+
 [7] J.N. Reddy, An Introduction to Nonlinear Finite Element Analysis, Oxford University Press, New York, 2004.
+
 [8] L.V. Kantorovich, V.I. Krylov, Approximate Methods of Higher Analysis, P. Noordhoff, 1958.
 
