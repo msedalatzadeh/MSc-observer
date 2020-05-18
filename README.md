@@ -1,3 +1,7 @@
-# Boundary Controller and Estimator for Micro Beam Models
+# Boundary Controller and Estimator Design for Micro Beam Models
 
-<img src="/tex/234508b7b1d0d30dbc8e4d6aa78695ea.svg?invert_in_darkmode&sanitize=true" align=middle width=19.22288114999999pt height=14.15524440000002pt/>
+Based on the strain gradient elasticity theory by Lam et al., a new flexible micro beam model can be derived by making Euler-Bernoulli beam assumptions and by using Hamilton principle. Accordingly, the governing PDE of motion and corresponding boundary conditions (BSc) for a micro cantilever beam with uniform cross section A and length L become
+
+<p align="center">
+<img src="figs/eq1.eps" width="600" />
+</p>
