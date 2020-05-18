@@ -36,7 +36,7 @@ The intermolecular forces that play a crucial role in micron and submicron scale
 in which the first right-hand side term gives the value of the electrostatic force with first order fringing field correction; the next one gives the value of the Casimir force; the last one is the usual expression for the van der Waals force. Furthermore, <img src="/tex/0327922857a3c80945224eeda3da15df.svg?invert_in_darkmode&sanitize=true" align=middle width=147.3744525pt height=26.76175259999998pt/> is Plank constant divided by <img src="/tex/5a7b63fcb316fdefe42e319d18ab939a.svg?invert_in_darkmode&sanitize=true" align=middle width=18.179315549999988pt height=21.18721440000001pt/>; <img src="/tex/7fb5615db5df7077d50164f2324feb86.svg?invert_in_darkmode&sanitize=true" align=middle width=148.95556499999998pt height=26.76175259999998pt/> is speed of light; <img src="/tex/732c7964ffecaa48684a1e457b308a5e.svg?invert_in_darkmode&sanitize=true" align=middle width=197.72883074999996pt height=26.76175259999998pt/> is the permittivity of vacuum;  <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> is the Hamaker constant with values in the range of <img src="/tex/5220c564d7790bf64afba19b17a21c46.svg?invert_in_darkmode&sanitize=true" align=middle width=117.08914634999998pt height=26.76175259999998pt/> and <img src="/tex/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.242037049999992pt height=22.465723500000017pt/> denotes the electrical potential difference between the beam and the underneath plate. Utilizing the strain gradient Euler-Bernoulli beam model and defining the following dimensionless variables:
 
 <p align="center">
-<img src="equations/Eqn5.gif" width="400" />
+<img src="equations/Eqn5.gif" width="600" />
 </p>
 
 the PDE and corresponding BCs governing the micro- or nano- cantilever beam used in M/NEMS devices are
@@ -87,10 +87,63 @@ As a case in point, considering the practical values for <img src="/tex/e5c0c551
 Running the dynamic simulations, Fig. 4(a) and 4(b) indicate dimensionless dynamic distance <img src="/tex/54d7657e71ba76441476037b8f6b67c5.svg?invert_in_darkmode&sanitize=true" align=middle width=46.643873099999986pt height=28.023570300000017pt/> for <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/8897c89dd043239cf31cea9a80e3ea90.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/> in the simulation of open-loop system, respectively.
 
 <p align="center">
-<img src="figs/fig4.jpg" width="600" /> 
+<img src="figs/fig4.jpg" width="600" /> (a)
 </p>
 <p align="center">
-<img src="figs/fig5.jpg" width="600" /> 
+<img src="figs/fig5.jpg" width="600" /> (b)
 </p>
 
-Fig. 4. Dimensionless dynamic distance   vs. time plotted for open-loop system: a)   and b)  .
+#### Fig. 4. Dimensionless dynamic distance <img src="/tex/54d7657e71ba76441476037b8f6b67c5.svg?invert_in_darkmode&sanitize=true" align=middle width=46.643873099999986pt height=28.023570300000017pt/> vs. time plotted for open-loop system: a) <img src="/tex/085a664020aea8bfcf3f74ba7c5fd2d4.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/> and b) <img src="/tex/8897c89dd043239cf31cea9a80e3ea90.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/>.
+
+As seen in these figures, the threshold of dynamic pull-in instability (<img src="/tex/8897c89dd043239cf31cea9a80e3ea90.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/>) is lower than that of static pull-in instability (<img src="/tex/6d5c8839437f91e399f00ed743400547.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/>); it can be explained by the fact that undershoot in the dynamic response could destabilize the system. Simulations are repeated for the closed-loop system in which the boundary controller is present in the nonlinear system. Similarly, dimensionless dynamic distance of the closed-loop system is plotted for <img src="/tex/8897c89dd043239cf31cea9a80e3ea90.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/> and <img src="/tex/e663240af222dedccc4ca6c44a736de6.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/> in Fig. 5(a) and 5(b), respectively.
+
+<p align="center">
+<img src="figs/fig6.jpg" width="600" /> (a)
+</p>
+<p align="center">
+<img src="figs/fig7.jpg" width="600" /> (b)
+</p>
+
+#### Fig. 5. Dimensionless dynamic distance <img src="/tex/54d7657e71ba76441476037b8f6b67c5.svg?invert_in_darkmode&sanitize=true" align=middle width=46.643873099999986pt height=28.023570300000017pt/> vs. time plotted for closed-loop system: a) <img src="/tex/8897c89dd043239cf31cea9a80e3ea90.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/> and b) <img src="/tex/e663240af222dedccc4ca6c44a736de6.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/>.
+
+As seen in these figures, the dynamic pull-in instability of open-loop and closed-loop systems occurs for <img src="/tex/e14cde30c9de120297d16860c473f12a.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/> and <img src="/tex/10f10e5ae310172fec414db568199bfb.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/>, respectively. Thus, it can be concluded that the proposed boundary feedback control law can postpone the dynamic pull-in instability. In addition, the dynamic pull-in threshold can be raised further by increasing the control gain. For instance, as shown in Fig. 6(a) and 6(b), the absolute value of <img src="/tex/aa90653a26bc63b138fb304972d81589.svg?invert_in_darkmode&sanitize=true" align=middle width=15.11042279999999pt height=22.831056599999986pt/> is increased tenfold which leads to stability of closed-loop system for <img src="/tex/584d8c55e723950137fe36d1978d3753.svg?invert_in_darkmode&sanitize=true" align=middle width=53.08780619999998pt height=22.831056599999986pt/>. This shows that an increase in the controller gain <img src="/tex/aa90653a26bc63b138fb304972d81589.svg?invert_in_darkmode&sanitize=true" align=middle width=15.11042279999999pt height=22.831056599999986pt/> can certainly decrease the beam fluctuations and therefore raise the pull-in threshold.
+
+<p align="center">
+<img src="figs/fig8.jpg" width="600" /> (a)
+</p>
+<p align="center">
+<img src="figs/fig9.jpg" width="600" /> (b)
+</p>
+
+#### Fig. 6. Dimensionless dynamic distance  <img src="/tex/54d7657e71ba76441476037b8f6b67c5.svg?invert_in_darkmode&sanitize=true" align=middle width=46.643873099999986pt height=28.023570300000017pt/> vs. time plotted for closed-loop system: a) <img src="/tex/e663240af222dedccc4ca6c44a736de6.svg?invert_in_darkmode&sanitize=true" align=middle width=61.307015549999996pt height=22.831056599999986pt/>  and b) <img src="/tex/584d8c55e723950137fe36d1978d3753.svg?invert_in_darkmode&sanitize=true" align=middle width=53.08780619999998pt height=22.831056599999986pt/>.
+
+The controller performance is also assessed for a large region of the parameters space. In the absence of the controller, the beam oscillation is simulated for various coefficients of <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width=10.57650494999999pt height=14.15524440000002pt/> in Fig. 7(a). In this figure, the vertical axis indicates the mean distance between free end of the beam and the ground after reaching a stable oscillation (i.e. <img src="/tex/c27310e08e00658b6d3c827b3b092094.svg?invert_in_darkmode&sanitize=true" align=middle width=359.00498534999997pt height=28.023570300000017pt/>). In the simulations, the beam oscillations become stable after a time about <img src="/tex/75d312053c3af90ce21b5b32a6505b1f.svg?invert_in_darkmode&sanitize=true" align=middle width=49.99989554999999pt height=28.023570300000017pt/>. The dashed line in Fig. 7(a) shows the dynamic pull-in instability limit; for the parameters pointed below the dashed line, the pull-in instability in the system response is inevitable. In the presence of the controller, the simulations are repeated in Fig. 7(b) in which the vertical axis represents the distance between free end of the beam and the ground when the beam comes to rest (i.e. <img src="/tex/d27bd9da49c7d02c914233ece3565bd1.svg?invert_in_darkmode&sanitize=true" align=middle width=107.63695634999998pt height=24.65753399999998pt/>). For the controller gain <img src="/tex/2e034da32b403938f2cb443561633419.svg?invert_in_darkmode&sanitize=true" align=middle width=58.85460899999999pt height=22.831056599999986pt/>, the steady state is reached before <img src="/tex/324d868bbc57edc07ab790417538f373.svg?invert_in_darkmode&sanitize=true" align=middle width=58.219104899999984pt height=28.023570300000017pt/>. As seen in this figure, the safe region for the force coefficients is extended and thus the stability is guaranteed for a large region of the parameters space.
+
+
+<p align="center">
+<img src="figs/fig10.jpg" width="600" /> (a)
+</p>
+
+#### Fig. 7(a). Mean distance <img src="/tex/a7db16f8491314ffabd40b06377b9f16.svg?invert_in_darkmode&sanitize=true" align=middle width=22.886329949999993pt height=22.465723500000017pt/> between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width=10.57650494999999pt height=14.15524440000002pt/>. 
+
+
+<p align="center">
+<img src="figs/fig11.jpg" width="600" /> (b)
+</p>
+
+#### Fig. 7(b). Steady state distance <img src="/tex/8b0f5eebd2b91657866d69597d365d76.svg?invert_in_darkmode&sanitize=true" align=middle width=24.326563799999988pt height=22.465723500000017pt/> between the free end of the beam and the ground in closed-loop system vs. nonlinear force coefficients <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode&sanitize=true" align=middle width=10.57650494999999pt height=14.15524440000002pt/>.
+
+
+The same procedure is followed for the nonlinear force coefficients <img src="/tex/56d800241026a4b09941874c8248eb84.svg?invert_in_darkmode&sanitize=true" align=middle width=8.21920935pt height=14.15524440000002pt/> and  <img src="/tex/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width=9.423880949999988pt height=14.15524440000002pt/> in Fig. 8(a), 8(b), 9(a), and Fig. 9(b). Similarly, the controller can suppress the beam vibrations and raise the pull-in threshold as well. In addition, when the dynamic pull-in instability in the open-loop system occurs, the mean distance <img src="/tex/a7db16f8491314ffabd40b06377b9f16.svg?invert_in_darkmode&sanitize=true" align=middle width=22.886329949999993pt height=22.465723500000017pt/> lies in the range of <img src="/tex/469da7e61e5393ec2959df8ef357fd47.svg?invert_in_darkmode&sanitize=true" align=middle width=71.23292549999998pt height=24.65753399999998pt/>. On the other hand, when the dynamic pull-in instability in the closed-loop system occurs, the steady state distance <img src="/tex/8b0f5eebd2b91657866d69597d365d76.svg?invert_in_darkmode&sanitize=true" align=middle width=24.326563799999988pt height=22.465723500000017pt/>  lies in the range of <img src="/tex/a8ad57e58ccc692e0cd351c2adb3a7ca.svg?invert_in_darkmode&sanitize=true" align=middle width=71.23292549999998pt height=24.65753399999998pt/>. This indicates that the controller can also extend the travel range of the M/NEMS devices beyond the well-known pull-in limits. In some tuning applications, a large stable travel range is extremely useful.
+
+<p align="center">
+<img src="figs/fig12.jpg" width="600" /> (a)
+</p>
+
+#### Fig. 8(a). Mean distance <img src="/tex/a7db16f8491314ffabd40b06377b9f16.svg?invert_in_darkmode&sanitize=true" align=middle width=22.886329949999993pt height=22.465723500000017pt/>  between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width=9.90492359999999pt height=14.15524440000002pt/>. 
+
+<p align="center">
+<img src="figs/fig13.jpg" width="600" /> (b)
+</p>
+
+#### Fig. 8(b). Steady state distance <img src="/tex/8b0f5eebd2b91657866d69597d365d76.svg?invert_in_darkmode&sanitize=true" align=middle width=24.326563799999988pt height=22.465723500000017pt/> between the free end of the beam and the ground in closed-loop system vs. nonlinear force coefficients <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/07617f9d8fe48b4a7b3f523d6730eef0.svg?invert_in_darkmode&sanitize=true" align=middle width=9.90492359999999pt height=14.15524440000002pt/>.
