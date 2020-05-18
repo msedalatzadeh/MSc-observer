@@ -48,4 +48,3 @@ g\frac{{{\partial ^3}Z}}{{\partial {{\tilde x}^3}}}\left( {1,\tilde t} \right) -
 \zeta g\frac{{{\partial ^4}Z}}{{\partial {{\tilde x}^4}}}\left( {1,\tilde t} \right) - g\frac{{{\partial ^2}Z}}{{\partial {{\tilde x}^2}}}\left( {1,\tilde t} \right) = {{\tilde M}^c},\,\,\,\,\,\,\\
  - \zeta g\frac{{{\partial ^3}Z}}{{\partial {{\tilde x}^3}}}\left( {1,\tilde t} \right) = {{\tilde M}^{nc}}.\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
 \end{array} \right.
-\end{array}
