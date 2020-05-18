@@ -36,7 +36,7 @@ The intermolecular forces that play a crucial role in micron and submicron scale
 in which the first right-hand side term gives the value of the electrostatic force with first order fringing field correction; the next one gives the value of the Casimir force; the last one is the usual expression for the van der Waals force. Furthermore, $\hbar = 1.055\times 10^{-43}Js$ is Plank constant divided by $2\pi$; $c=2.2998\times 10^8 m/s$ is speed of light; $\epsilon_0=8.854\times 10^{-12}C^2/Nm^2$ is the permittivity of vacuum;  $A$ is the Hamaker constant with values in the range of $[0.4,4]\times 10^{-19}J$ and $V$ denotes the electrical potential difference between the beam and the underneath plate. Utilizing the strain gradient Euler-Bernoulli beam model and defining the following dimensionless variables:
 
 <p align="center">
-<img src="equations/Eqn5.gif" width="400" />
+<img src="equations/Eqn5.gif" width="600" />
 </p>
 
 the PDE and corresponding BCs governing the micro- or nano- cantilever beam used in M/NEMS devices are
@@ -87,10 +87,63 @@ As a case in point, considering the practical values for $\zeta$, $\gamma$, $\al
 Running the dynamic simulations, Fig. 4(a) and 4(b) indicate dimensionless dynamic distance $Z(1,\tilde{t})$ for $\beta$ and $\beta=1.32$ in the simulation of open-loop system, respectively.
 
 <p align="center">
-<img src="figs/fig4.jpg" width="600" /> 
+<img src="figs/fig4.jpg" width="600" /> (a)
 </p>
 <p align="center">
-<img src="figs/fig5.jpg" width="600" /> 
+<img src="figs/fig5.jpg" width="600" /> (b)
 </p>
 
-Fig. 4. Dimensionless dynamic distance   vs. time plotted for open-loop system: a)   and b)  .
+#### Fig. 4. Dimensionless dynamic distance $Z(1,\tilde{t})$ vs. time plotted for open-loop system: a) $\beta=0.62$ and b) $\beta=1.32$.
+
+As seen in these figures, the threshold of dynamic pull-in instability ($\beta=1.32$) is lower than that of static pull-in instability ($\beta=1.56$); it can be explained by the fact that undershoot in the dynamic response could destabilize the system. Simulations are repeated for the closed-loop system in which the boundary controller is present in the nonlinear system. Similarly, dimensionless dynamic distance of the closed-loop system is plotted for $\beta=1.32$ and $\beta=1.38$ in Fig. 5(a) and 5(b), respectively.
+
+<p align="center">
+<img src="figs/fig6.jpg" width="600" /> (a)
+</p>
+<p align="center">
+<img src="figs/fig7.jpg" width="600" /> (b)
+</p>
+
+#### Fig. 5. Dimensionless dynamic distance $Z(1,\tilde{t})$ vs. time plotted for closed-loop system: a) $\beta=1.32$ and b) $\beta=1.38$.
+
+As seen in these figures, the dynamic pull-in instability of open-loop and closed-loop systems occurs for $\beta\ge 1.32$ and $\beta\ge 1.38$, respectively. Thus, it can be concluded that the proposed boundary feedback control law can postpone the dynamic pull-in instability. In addition, the dynamic pull-in threshold can be raised further by increasing the control gain. For instance, as shown in Fig. 6(a) and 6(b), the absolute value of $k_1$ is increased tenfold which leads to stability of closed-loop system for $\beta=1.5$. This shows that an increase in the controller gain $k_1$ can certainly decrease the beam fluctuations and therefore raise the pull-in threshold.
+
+<p align="center">
+<img src="figs/fig8.jpg" width="600" /> (a)
+</p>
+<p align="center">
+<img src="figs/fig9.jpg" width="600" /> (b)
+</p>
+
+#### Fig. 6. Dimensionless dynamic distance  $Z(1,\tilde{t})$ vs. time plotted for closed-loop system: a) $\beta=1.38$  and b) $\beta=1.5$.
+
+The controller performance is also assessed for a large region of the parameters space. In the absence of the controller, the beam oscillation is simulated for various coefficients of $\beta$ and $\alpha$ in Fig. 7(a). In this figure, the vertical axis indicates the mean distance between free end of the beam and the ground after reaching a stable oscillation (i.e. $Z_m = \min (Z(1,\tilde{t}\ge t_\infty))/2 +  \max (Z(1,\tilde{t}\ge t_\infty))/2$). In the simulations, the beam oscillations become stable after a time about $\tilde{t}_\infty = 5$. The dashed line in Fig. 7(a) shows the dynamic pull-in instability limit; for the parameters pointed below the dashed line, the pull-in instability in the system response is inevitable. In the presence of the controller, the simulations are repeated in Fig. 7(b) in which the vertical axis represents the distance between free end of the beam and the ground when the beam comes to rest (i.e. $Z_\infty= Z(1,t_\infty)$). For the controller gain $k_1=-1$, the steady state is reached before $\tilde{t}_\infty=10$. As seen in this figure, the safe region for the force coefficients is extended and thus the stability is guaranteed for a large region of the parameters space.
+
+
+<p align="center">
+<img src="figs/fig10.jpg" width="600" /> (a)
+</p>
+
+#### Fig. 7(a). Mean distance $Z_m$ between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients $\beta$ and $\alpha$. 
+
+
+<p align="center">
+<img src="figs/fig11.jpg" width="600" /> (b)
+</p>
+
+#### Fig. 7(b). Steady state distance $Z_\infty$ between the free end of the beam and the ground in closed-loop system vs. nonlinear force coefficients $\beta$ and $\alpha$.
+
+
+The same procedure is followed for the nonlinear force coefficients $\mi$ and  $\gamma$ in Fig. 8(a), 8(b), 9(a), and Fig. 9(b). Similarly, the controller can suppress the beam vibrations and raise the pull-in threshold as well. In addition, when the dynamic pull-in instability in the open-loop system occurs, the mean distance $Z_m$ lies in the range of $[0.6-0.8]$. On the other hand, when the dynamic pull-in instability in the closed-loop system occurs, the steady state distance $Z_\infty$  lies in the range of $[0.5-0.7]$. This indicates that the controller can also extend the travel range of the M/NEMS devices beyond the well-known pull-in limits. In some tuning applications, a large stable travel range is extremely useful.
+
+<p align="center">
+<img src="figs/fig12.jpg" width="600" /> (a)
+</p>
+
+#### Fig. 8(a). Mean distance $Z_m$  between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients $\beta$ and $\mu$. 
+
+<p align="center">
+<img src="figs/fig13.jpg" width="600" /> (b)
+</p>
+
+#### Fig. 8(b). Steady state distance $Z_\infty$ between the free end of the beam and the ground in closed-loop system vs. nonlinear force coefficients $\beta$ and $\mu$.
