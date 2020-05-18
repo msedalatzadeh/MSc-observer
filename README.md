@@ -4,9 +4,8 @@ Based on the strain gradient elasticity theory by Lam et al., a new flexible mic
 
 <p align="center"><img src="/tex/bb6346022ff9e9e659b931d570d586f1.svg?invert_in_darkmode&sanitize=true" align=middle width=274.91768865pt height=35.77743345pt/></p>
 
-<p align="center">
-<img src="equations/Eqn2.gif" width="300" />
-</p>
+<p align="center"><img src="/tex/9b7e99ad70665eacdd43f246f8552706.svg?invert_in_darkmode&sanitize=true" align=middle width=268.45978829999996pt height=90.34160189999999pt/></p>
+
 
 
 where <img src="/tex/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode&sanitize=true" align=middle width=9.39498779999999pt height=14.15524440000002pt/> and <img src="/tex/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width=5.936097749999991pt height=20.221802699999984pt/> denote the independent spatial and time variables, respectively; <img src="/tex/6dec54c48a0438a5fcde6053bdb9d712.svg?invert_in_darkmode&sanitize=true" align=middle width=8.49888434999999pt height=14.15524440000002pt/> represents the beam density; <img src="/tex/31fae8b8b78ebe01cbfbe2fe53832624.svg?invert_in_darkmode&sanitize=true" align=middle width=12.210846449999991pt height=14.15524440000002pt/> indicates the lateral deflection; <img src="/tex/c9c2db7f99ad17c2472a4affcb1e265b.svg?invert_in_darkmode&sanitize=true" align=middle width=45.239815499999985pt height=24.65753399999998pt/> denotes distributed external transverse force; <img src="/tex/b8bc815b5e9d5177af01fd4d3d3c2f10.svg?invert_in_darkmode&sanitize=true" align=middle width=12.85392569999999pt height=22.465723500000017pt/>, <img src="/tex/589d535d5d49f9883567e08b36a036ce.svg?invert_in_darkmode&sanitize=true" align=middle width=23.61436769999999pt height=22.465723500000017pt/> and <img src="/tex/b2d45a3069041db007d04b5e55728ec8.svg?invert_in_darkmode&sanitize=true" align=middle width=31.74039164999999pt height=22.465723500000017pt/> are control inputs and refer to boundary force, moment and non-classical moment exerted at the tip of beam, respectively.  In addition,
