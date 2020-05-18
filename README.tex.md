@@ -186,7 +186,7 @@ att{1}=[0;0;0;MG(4:3*(n+1),4:3*(n+1))\(-F0(4:3*(n+1)))];
 .
 ```
 
-This script uses two functions `force.m` and `tanforce.m`. These functions calculate the non-linearity and the gradient of the non-linearity, respectively. Also, these function are generated using **MATLAB Symbolic ToolBox** and use of `MatlabFunction()` incorporated in `force_generator.m` and `tanforce_generator.m`.
+This script uses two functions `force.m` and `tanforce.m`. These functions calculate the non-linearity and the gradient of the non-linearity, respectively. The functions are generated using **MATLAB Symbolic ToolBox** and `MatlabFunction()` both incorporated in `force_generator.m` and `tanforce_generator.m`.
 
 ```matlab
 %% force_generator.m
@@ -208,7 +208,7 @@ F=matlabFunction(Fsym,'file','force','vars',{a,s,alpha,mu,beta,gama,Le});
 ```
 
 ##	Simulation Results
-In this section, the effectiveness of the proposed controller in suppressing the nonlinear forced vibrations and dynamic pull-in instability of the system is demonstrated. In this regard, the nonlinear dimensionless PDE and corresponding BCs. in (2.9) under the boundary feedback control law (3.9) are numerically solved using Kantorovich method and iterative Newton-Raphson algorithm. Nonlinear terms in the governing PDE arise from external distributed forces, namely Casimir, van der Waals forces, and electrostatic force with first order fringing field correction; coefficients $\alpha$, $\mu$, $\beta$ and $\gamma$ are associated with these forces, respectively.
+Several control and estimation strategies are proposed in my papers [1,2,3]. In this section, the effectiveness of the proposed strategies in suppressing the nonlinear forced vibrations and dynamic pull-in instability of the system is demonstrated. In this regard, the nonlinear dimensionless PDE and corresponding BCs. in (2.9) under the boundary feedback control law (3.9) are numerically solved using Kantorovich method and iterative Newton-Raphson algorithm. Nonlinear terms in the governing PDE arise from external distributed forces, namely Casimir, van der Waals forces, and electrostatic force with first order fringing field correction; coefficients $\alpha$, $\mu$, $\beta$ and $\gamma$ are associated with these forces, respectively.
 
 The geometrical and mechanical properties of the strain gradient micro-beam considered for computer simulations are specified in Table 1. The micro-beam is considered to be made of epoxy; the mechanical properties of the epoxy micro-beams are measured by Lam et al.
 
