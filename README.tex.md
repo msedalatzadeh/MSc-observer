@@ -22,3 +22,16 @@ where $x$ and $t$ denote the independent spatial and time variables, respectivel
 
 
 where $I$ is the area moment of inertia of the beam cross-section; $\mu$ and $E$ are the shear and Young’s modulus, respectively; $\ell_0$,  $\ell_1$, and $\ell_2$ are additional material constants that appear in the constitutive relations between higher order stress tensors and strain tensors in strain gradient elasticity theory. By setting $\ell_0$, $\ell_1$, and $\ell_2$ to zero, the classical Euler-Bernoulli beam model can be obtained straightforwardly. 
+
+
+
+### External Distributed Forces
+A schematic of the cantilever beam used in M/NEMS devices is shown in the Fig. 1. The cantilever has length $L$, uniform cross section $A$, and width $b$; it is separated by a gap with length $g$ from the underneath substrate. The substrate exposes the beam to nonlinear distributed forces arising from electrical potential difference and intermolecular interactions between the beam and the underneath substrate.
+ 
+$$f(x,t) = f(w) = \frac{{{\varepsilon _0}b{V^2}}}{{2{{(g - w)}^2}}}(1 + 0.65\frac{{g - w}}{b}) + \frac{{{\pi ^2}\hbar cb}}{{240{{(g - w)}^4}}} + \frac{{Ab}}{{6\pi {{(g - w)}^3}}},$$
+
+#### Fig. 1. Schematic of a cantilever beam based M/NEMS device: (a) Cantilever beam, (b) Dielectric spacer, and (c) Substrate.
+
+The intermolecular forces that play a crucial role in micron and submicron scale are the van der Waals and the Casimir force, which have different range of application. The Casimir force is effective in the micro-scale ranges whereas the van der Waals force is effective in nano-scale ranges. To investigate a general case, we omit consideration of the transition regime and formulate the distributed external transverse forces more generally as follows:
+  
+$$\alpha  = \frac{{{\pi ^2}\hbar cb{L^4}}}{{240{g^5}{K_1}}}\,,\,\,\,\mu  = \frac{{Ab{L^4}}}{{6\pi {g^4}{K_1}}},\,\,\,\beta  = \frac{{{\varepsilon _0}b{V^2}{L^4}}}{{2{g^3}{K_1}}}\,,\,\,\,\gamma  = 0.65\frac{g}{b}\,,\,\,\,Z(\tilde x,\tilde t) = 1 - \frac{{w(\tilde x,\tilde t)}}{g},$$
