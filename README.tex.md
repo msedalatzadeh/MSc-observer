@@ -40,11 +40,11 @@ $$\alpha  = \frac{{{\pi ^2}\hbar cb{L^4}}}{{240{g^5}{K_1}}}\,,\,\,\,\mu  = \frac
 
 in which the first right-hand side term gives the value of the electrostatic force with first order fringing field correction; the next one gives the value of the Casimir force; the last one is the usual expression for the van der Waals force. Furthermore, $\hbar = 1.055\times 10^{-43}Js$ is Plank constant divided by $2\pi$; $c=2.2998\times 10^8 m/s$ is speed of light; $\epsilon_0=8.854\times 10^{-12}C^2/Nm^2$ is the permittivity of vacuum;  $A$ is the Hamaker constant with values in the range of $[0.4,4]\times 10^{-19}J$ and $V$ denotes the electrical potential difference between the beam and the underneath plate. Utilizing the strain gradient Euler-Bernoulli beam model and defining the following dimensionless variables:
 
-\begin{array}{l}
+$$\left\{ \begin{array}{l}
 \frac{{{\partial ^4}Z}}{{\partial {{\tilde x}^4}}} - \zeta \frac{{{\partial ^6}Z}}{{\partial {{\tilde x}^6}}} + \frac{{{\partial ^2}Z}}{{\partial {{\tilde t}^2}}} + \frac{\alpha }{{{Z^4}}} + \frac{\mu }{{{Z^3}}} + \frac{\beta }{{{Z^2}}} + \frac{{\gamma \beta }}{Z} = 0.\\
 \left\{ \begin{array}{l}
 Z\left( {0,\tilde t} \right) = 1,\,\,\frac{{\partial Z}}{{\partial \tilde x}}\left( {0,\tilde t} \right) = \frac{{{\partial ^2}Z}}{{\partial {{\tilde x}^2}}}\left( {0,\tilde t} \right) = 0,\\
 g\frac{{{\partial ^3}Z}}{{\partial {{\tilde x}^3}}}\left( {1,\tilde t} \right) - \zeta g\frac{{{\partial ^5}Z}}{{\partial {{\tilde x}^5}}}\left( {1,\tilde t} \right) = \tilde F,\\
 \zeta g\frac{{{\partial ^4}Z}}{{\partial {{\tilde x}^4}}}\left( {1,\tilde t} \right) - g\frac{{{\partial ^2}Z}}{{\partial {{\tilde x}^2}}}\left( {1,\tilde t} \right) = {{\tilde M}^c},\\
  - \zeta g\frac{{{\partial ^3}Z}}{{\partial {{\tilde x}^3}}}\left( {1,\tilde t} \right) = {{\tilde M}^{nc}}.
-\end{array} \right.
+\end{array} \right.$$
