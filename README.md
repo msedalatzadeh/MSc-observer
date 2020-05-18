@@ -2,9 +2,8 @@
 
 Based on the strain gradient elasticity theory by Lam et al., a new flexible micro beam model can be derived by making Euler-Bernoulli beam assumptions and by using Hamilton principle. Accordingly, the governing PDE of motion and corresponding boundary conditions (BSc) for a micro cantilever beam with uniform cross section <img src="/tex/53d147e7f3fe6e47ee05b88b166bd3f6.svg?invert_in_darkmode&sanitize=true" align=middle width=12.32879834999999pt height=22.465723500000017pt/> and length <img src="/tex/ddcb483302ed36a59286424aa5e0be17.svg?invert_in_darkmode&sanitize=true" align=middle width=11.18724254999999pt height=22.465723500000017pt/> become
 
-<p align="center">
-<img src="equations/Eqn1.gif" width="300" />
-</p>
+<p align="center"><img src="/tex/bb6346022ff9e9e659b931d570d586f1.svg?invert_in_darkmode&sanitize=true" align=middle width=274.91768865pt height=35.77743345pt/></p>
+
 <p align="center">
 <img src="equations/Eqn2.gif" width="300" />
 </p>
@@ -150,7 +149,7 @@ The same procedure is followed for the nonlinear force coefficients <img src="/t
 
 
 <p align="center">
-<img src="figs/fig14.jpg" width="600" /> (b)
+<img src="figs/fig14.jpg" width="600" /> (a)
 </p>
 
 #### Fig. 9(a). Mean distance <img src="/tex/a7db16f8491314ffabd40b06377b9f16.svg?invert_in_darkmode&sanitize=true" align=middle width=22.886329949999993pt height=22.465723500000017pt/> between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode&sanitize=true" align=middle width=9.423880949999988pt height=14.15524440000002pt/>.
@@ -167,14 +166,14 @@ In all of the simulations, Casimir and van der Waals forces have adverse effect 
 The effect of the new material length scales is also studied in Fig. 10(a) and Fig. 10(b). In these figures, the coefficient of the non-classical terms in the governing equation (i.e. the coefficient <img src="/tex/e5c0c55191274dbb2a4499ab5c5b8175.svg?invert_in_darkmode&sanitize=true" align=middle width=8.40469739999999pt height=22.831056599999986pt/>) is changed from <img src="/tex/bd64dd0088109d9c74e867a1de2bbfa7.svg?invert_in_darkmode&sanitize=true" align=middle width=33.26498669999999pt height=26.76175259999998pt/> to <img src="/tex/4ee5fa5a96c6f442405ed41d33f5da26.svg?invert_in_darkmode&sanitize=true" align=middle width=33.26498669999999pt height=26.76175259999998pt/>. Simulations show that the more beam model deviates from the classical model the more pull-in threshold is raised. Moreover, similar to previous simulations, in the presence of controller, the travel range is wider and the pull-in voltage is higher.
 
 <p align="center">
-<img src="figs/fig16.jpg" width="600" /> (b)
+<img src="figs/fig16.jpg" width="600" /> (a)
 </p>
 
-Fig. 10(a). Mean distance  <img src="/tex/a7db16f8491314ffabd40b06377b9f16.svg?invert_in_darkmode&sanitize=true" align=middle width=22.886329949999993pt height=22.465723500000017pt/> between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/e5c0c55191274dbb2a4499ab5c5b8175.svg?invert_in_darkmode&sanitize=true" align=middle width=8.40469739999999pt height=22.831056599999986pt/>.
+#### Fig. 10(a). Mean distance  <img src="/tex/a7db16f8491314ffabd40b06377b9f16.svg?invert_in_darkmode&sanitize=true" align=middle width=22.886329949999993pt height=22.465723500000017pt/> between the free end of the beam and the ground for stable oscillations in open-loop system vs. nonlinear force coefficients <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/e5c0c55191274dbb2a4499ab5c5b8175.svg?invert_in_darkmode&sanitize=true" align=middle width=8.40469739999999pt height=22.831056599999986pt/>.
 
 <p align="center">
 <img src="figs/fig17.jpg" width="600" /> (b)
 </p>
 
-Fig. 10(b). Steady state distance <img src="/tex/8b0f5eebd2b91657866d69597d365d76.svg?invert_in_darkmode&sanitize=true" align=middle width=24.326563799999988pt height=22.465723500000017pt/> between the free end of the beam and the ground in closed-loop system vs. nonlinear force coefficients <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/e5c0c55191274dbb2a4499ab5c5b8175.svg?invert_in_darkmode&sanitize=true" align=middle width=8.40469739999999pt height=22.831056599999986pt/>.
+#### Fig. 10(b). Steady state distance <img src="/tex/8b0f5eebd2b91657866d69597d365d76.svg?invert_in_darkmode&sanitize=true" align=middle width=24.326563799999988pt height=22.465723500000017pt/> between the free end of the beam and the ground in closed-loop system vs. nonlinear force coefficients <img src="/tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode&sanitize=true" align=middle width=10.16555099999999pt height=22.831056599999986pt/> and <img src="/tex/e5c0c55191274dbb2a4499ab5c5b8175.svg?invert_in_darkmode&sanitize=true" align=middle width=8.40469739999999pt height=22.831056599999986pt/>.
 
