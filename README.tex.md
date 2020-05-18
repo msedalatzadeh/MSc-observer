@@ -181,13 +181,13 @@ att{1}=[0;0;0;MG(4:3*(n+1),4:3*(n+1))\(-F0(4:3*(n+1)))];
 .
 .
 .
-.  Please see the original code for the rest
+.  Please see the files for the rest
 .
 .
 .
 ```
 
-This script uses two functions `force.m` and `tanforce.m`. These functions respectively calculate the non-linearity and the gradient of the non-linearity, respectively. Also, these function are generated using **MATLAB Symbolic ToolBox** and use of `MatlabFunction()` found in `force_generator.m` and `tanforce_generator.m`.
+This script uses two functions `force.m` and `tanforce.m`. These functions respectively calculate the non-linearity and the gradient of the non-linearity, respectively. Also, these function are generated using **MATLAB Symbolic ToolBox** and use of `MatlabFunction()` incorporated in `force_generator.m` and `tanforce_generator.m`.
 
 ```matlab
 %% force_generator.m
